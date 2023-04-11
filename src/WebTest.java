@@ -33,7 +33,7 @@ public class WebTest {
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://chaldal.com/");
+        driver.get("https://www.daraz.com.bd/");
         Thread.sleep(2000); // only one click wait method
         driver.manage().window().maximize();
 
@@ -44,17 +44,29 @@ public class WebTest {
 //        Thread.sleep(5000);
 //        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/h5")).click();
 //        Thread.sleep(5000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("Egg");
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/section")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys("Egg");
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[3]/div/div[1]/div[1]/form/div/div[1]/input")).sendKeys(Keys.ENTER);
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/section")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[6]/section/div/div/div/div/section/div[3]/div[2]/div[1]/div/div[2]/button[2]")).click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/section")).click();
+//        Thread.sleep(2000);
+//        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div[3]/div/div/button/span[1]")).click();
+        driver.findElement(By.xpath("//input[@type=\"search\"]")).sendKeys("Light");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/section")).click();
+        driver.findElement(By.xpath("//input[@type=\"search\"]")).sendKeys(Keys.ENTER);
         Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div[3]/div/div/button/span[1]")).click();
+        driver.findElement(By.xpath("//div[@class=\"title--wFj93\"]")).click();
+        Thread.sleep(2000);
+        for(int i=0; i<4; i++){
+            driver.findElement(By.xpath("//div[@class=\"next-number-picker-handler-wrap\"]/child::a[@unselectable=\"unselectable\"]")).click();
+        }
+        Thread.sleep(200);
+        driver.findElement(By.xpath("//button[@class=\"add-to-cart-buy-now-btn  pdp-button pdp-button_type_text pdp-button_theme_bluedaraz pdp-button_size_xl\"]/child::span")).click();
+        Thread.sleep(2000);
 
 
 
